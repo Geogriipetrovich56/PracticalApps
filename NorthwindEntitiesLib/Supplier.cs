@@ -38,6 +38,7 @@ namespace Packt.Shared
         [StringLength(24)]
         public string? Fax { get; set; }
         [Column(TypeName = "ntext")]
+        [StringLength(15)]
         public string? HomePage { get; set; }
 
         [InverseProperty(nameof(Product.Supplier))]
