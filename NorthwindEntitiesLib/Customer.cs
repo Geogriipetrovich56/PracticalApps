@@ -19,9 +19,8 @@ namespace Packt.Shared
         }
 
         [Key]
-        [Column("CustomerID")]
         [StringLength(5)]
-        public string CustomerId { get; set; } = null!;
+        public string CustomerID { get; set; } = null!;
         [StringLength(40)]
         public string CompanyName { get; set; } = null!;
         [StringLength(30)]

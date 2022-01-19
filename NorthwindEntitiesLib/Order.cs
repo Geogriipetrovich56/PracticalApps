@@ -22,8 +22,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        [Column("OrderID")]
-        public int OrderId { get; set; }
+        public int OrderID { get; set; }
         [Column("CustomerID")]
         [StringLength(5)]
         public string? CustomerId { get; set; }

@@ -15,8 +15,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        [Column("CategoryID")]
-        public int CategoryId { get; set; }
+        public int CategoryID { get; set; }
         [StringLength(15)]
         public string CategoryName { get; set; } = null!;
         [Column(TypeName = "ntext")]

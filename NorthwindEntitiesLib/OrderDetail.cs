@@ -7,27 +7,25 @@ using Microsoft.EntityFrameworkCore;
 namespace Packt.Shared
 {
     [Table("Order Details")]
-    [Index(nameof(OrderId), Name = "OrderID")]
-    [Index(nameof(OrderId), Name = "OrdersOrder_Details")]
-    [Index(nameof(ProductId), Name = "ProductID")]
-    [Index(nameof(ProductId), Name = "ProductsOrder_Details")]
+    [Index(nameof(OrderID), Name = "OrderID")]
+    [Index(nameof(OrderID), Name = "OrdersOrder_Details")]
+    [Index(nameof(ProductID), Name = "ProductID")]
+    [Index(nameof(ProductID), Name = "ProductsOrder_Details")]
     public partial class OrderDetail
     {
         [Key]
-        [Column("OrderID")]
-        public int OrderId { get; set; }
+        public int OrderID { get; set; }
         [Key]
-        [Column("ProductID")]
-        public int ProductId { get; set; }
+        public int ProductID { get; set; }
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }
         public short Quantity { get; set; }
         public float Discount { get; set; }
 
-        [ForeignKey(nameof(OrderId))]
+        [ForeignKey(nameof(OrderID))]
         [InverseProperty("OrderDetails")]
         public virtual Order Order { get; set; } = null!;
-        [ForeignKey(nameof(ProductId))]
+        [ForeignKey(nameof(ProductID))]
         [InverseProperty("OrderDetails")]
         public virtual Product Product { get; set; } = null!;
     }

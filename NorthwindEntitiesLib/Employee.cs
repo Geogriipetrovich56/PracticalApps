@@ -18,8 +18,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        [Column("EmployeeID")]
-        public int EmployeeId { get; set; }
+        public int EmployeeID { get; set; }
         [StringLength(20)]
         public string LastName { get; set; } = null!;
         [StringLength(10)]

@@ -19,8 +19,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        [Column("ProductID")]
-        public int ProductId { get; set; }
+        public int ProductID { get; set; }
         [StringLength(40)]
         public string ProductName { get; set; } = null!;
         [Column("SupplierID")]
