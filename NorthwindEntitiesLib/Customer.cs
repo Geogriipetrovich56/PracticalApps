@@ -20,6 +20,7 @@ namespace Packt.Shared
 
         [Key]
         [StringLength(5)]
+        [RegularExpression("[A-Z]{5}")]
         public string CustomerID { get; set; } = null!;
         [StringLength(40)]
         public string CompanyName { get; set; } = null!;
